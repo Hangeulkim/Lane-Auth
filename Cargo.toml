@@ -1,0 +1,48 @@
+[package]
+name = "oauth"
+version = "0.6.0"
+edition = "2021"
+authors = ["Chan Jin Kim <ckswls89@gmail.com>"]
+license = "MIT/Apache-2.0"
+
+homepage = "https://deamhome.synology.me"
+repository = ""
+documentation = ""
+
+description = """
+
+"""
+readme = "README.md"
+keywords = ["rust", "rocket", "redis", "jwt", "diesel"]
+categories = ["web-programming", "authentication"]
+
+[dependencies]
+redis = { version = "0.26.1", features = ["async-std-comp"] }
+diesel = { version = "2.2.3", features = ["postgres", "uuid", "chrono"] }
+uuid = {version =  "1.10.0", features = ["serde", "v4"] }
+diesel-async = { version = "0.5.0", features = ["postgres"] }
+
+pg-embed = "0.7.1"
+
+rocket = { version = "0.5.1", features = ["secrets"] }
+rocket_cors = "0.6.0"
+validator = "0.18.1"
+
+jsonwebtoken = "9.3.0"
+serde = {version = "1.0.209", features = ["derive"] }
+serde_derive = "1.0.209"
+serde_json = "1.0.127"
+
+bcrypt = "0.15.1"
+dotenvy = "0.15.7"
+
+chrono = { version = "0.4.38", features = ["serde"] }
+
+anyhow = "1.0.86"
+thiserror = "1.0.63"
+
+log = "0.4.22"
+env_logger = "0.11.5"
+
+rand = "0.8.5"
+regex = "1.10.6"
