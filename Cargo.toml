@@ -2,18 +2,19 @@
 name = "oauth"
 version = "0.6.0"
 edition = "2021"
-authors = ["Chan Jin Kim <ckswls89@gmail.com>"]
+authors = ["Chan Jin Kim <ckswls89@gmail.com>",
+            "SOSTeam <https://github.com/S-OSTeam>"]
 license = "MIT/Apache-2.0"
 
 homepage = "https://deamhome.synology.me"
-repository = ""
-documentation = ""
+repository = "https://github.com/S-OSTeam/Lane-Auth"
+documentation = "https://github.com/S-OSTeam/Lane-Auth"
 
 description = """
 
 """
 readme = "README.md"
-keywords = ["rust", "rocket", "redis", "jwt", "diesel"]
+keywords = ["rust", "rocket", "auth", "jwt", "diesel"]
 categories = ["web-programming", "authentication"]
 
 [dependencies]

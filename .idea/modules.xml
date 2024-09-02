@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/oauth.iml" filepath="$PROJECT_DIR$/oauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lane-auth.iml" filepath="$PROJECT_DIR$/lane-auth.iml" />
     </modules>
   </component>
 </project>
