@@ -18,31 +18,31 @@ keywords = ["rust", "rocket", "auth", "jwt", "diesel"]
 categories = ["web-programming", "authentication"]
 
 [dependencies]
-redis = { version = "0.26.1", features = ["async-std-comp"] }
-diesel = { version = "2.2.3", features = ["postgres", "uuid", "chrono"] }
+redis = { version = "0.27.0", features = ["async-std-comp"] }
+sea-orm = {version = "1.1.0-rc.1", features = ["sqlx-postgres", "runtime-tokio-native-tls", "with-uuid", "with-bigdecimal", "postgres-array", "mock"]}
 uuid = {version =  "1.10.0", features = ["serde", "v4"] }
-diesel-async = { version = "0.5.0", features = ["postgres"] }
 
 pg-embed = "0.7.1"
 
-rocket = { version = "0.5.1", features = ["secrets"] }
-rocket_cors = "0.6.0"
+actix-web = "4"
 validator = "0.18.1"
 
 jsonwebtoken = "9.3.0"
-serde = {version = "1.0.209", features = ["derive"] }
-serde_derive = "1.0.209"
-serde_json = "1.0.127"
+serde = {version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
 
 bcrypt = "0.15.1"
 dotenvy = "0.15.7"
+ammonia = "4.0.0"
 
 chrono = { version = "0.4.38", features = ["serde"] }
 
-anyhow = "1.0.86"
+anyhow = "1.0.88"
 thiserror = "1.0.63"
 
 log = "0.4.22"
+log4rs = "1.3.0"
+logcall = "0.1.9"
 env_logger = "0.11.5"
 
 rand = "0.8.5"
