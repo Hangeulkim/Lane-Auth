@@ -3,4 +3,5 @@
 pub mod prelude;
 
 pub mod auth;
+pub mod auth_sns;
 pub mod error_message;

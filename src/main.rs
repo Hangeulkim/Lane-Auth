@@ -1,6 +1,6 @@
-use diesel::*;
-use std::io::{stdin, Read};
+extern crate actix_web;
 
+#[actix_rt::main]
 fn main() {
     let connection = &mut establish_connection();
 

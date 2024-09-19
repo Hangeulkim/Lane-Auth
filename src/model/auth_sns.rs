@@ -3,30 +3,32 @@
 use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, PartialEq, DeriveEntityModel, Eq)]
-#[sea_orm(table_name = "auth")]
+#[sea_orm(table_name = "auth_sns")]
 pub struct Model {
     #[sea_orm(primary_key, auto_increment = false)]
     pub id: String,
-    pub user_id: Option<String>,
-    pub email: Option<String>,
-    pub account_status: Option<String>,
-    pub role: Vec<String>,
-    pub deleted_at: Option<DateTimeWithTimeZone>,
-    #[sea_orm(created_at)]
+    pub auth_id: Option<String>,
+    pub sns: Option<String>,
+    pub sns_id: Option<String>,
     pub created_at: Option<DateTimeWithTimeZone>,
-    #[sea_orm(updated_at)]
     pub updated_at: Option<DateTimeWithTimeZone>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
-    #[sea_orm(has_many = "super::auth_sns::Entity")]
-    AuthSns,
+    #[sea_orm(
+        belongs_to = "super::auth::Entity",
+        from = "Column::AuthId",
+        to = "super::auth::Column::Id",
+        on_update = "Cascade",
+        on_delete = "Cascade"
+    )]
+    Auth,
 }
 
-impl Related<super::auth_sns::Entity> for Entity {
+impl Related<super::auth::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::AuthSns.def()
+        Relation::Auth.def()
     }
 }
 

@@ -10,6 +10,9 @@ pub struct Model {
     pub message_format: String,
     pub message_code: String,
     pub http_status_code: String,
+    pub locale: String,
+    pub created_at: Option<DateTimeWithTimeZone>,
+    pub updated_at: Option<DateTimeWithTimeZone>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
